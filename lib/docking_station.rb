@@ -5,3 +5,8 @@ class Dockingstation
   end
 
 end
+
+docking_station = Dockingstation.new
+bike = docking_station.release_bike
+
+#I am on step 9
