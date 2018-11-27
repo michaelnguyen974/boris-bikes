@@ -1,5 +1,5 @@
-# Boris Bikes
+# boris-bikes
 
-We aim to build a programme which emulates the self docking bicycle rental service in London.
+A project aiming to build a programme that will emulate the docking statio,s bikes and infrastructure of London's Santander Cycle system.
 
-We aim to write code which is easy to use, that we can test-drive, can build with objects and understand how our language works.
+We aim to write code which is easy to change, that is written by TDD, built with objects and we aim to understand how our language works.
