@@ -20,21 +20,20 @@ RSpec.describe Dockingstation do
   it { is_expected.to respond_to :release_bike }
 
   describe '#release_bike' do 
-
-  it "Does docking station release a bike" do
-  bike = Bike.new 
-  @station.dock(bike)
-  expect(@station.release_bike).to eq bike
-  end 
-
-    it "Raises error when No bikes available" do 
-      expect { @station.release_bike }.to raise_error("No bikes available")
+    it "Does docking station release a bike" do
+      bike = Bike.new 
+      @station.dock(bike)
+      expect(@station.release_bike).to eq bike
     end 
+    it "Raises error when No bikes available" do 
+      expect { @station.release_bike }.to raise_error "No bikes available"
+    end 
+  end
 
+  describe 'dock' do
     it "Raises error when more than one bike is docked" do
-    
-    subject.dock(Bike.new)
-      expect { @station.dock(Bike.new) }.to raise_error("station is full")
+      subject.dock(Bike.new)
+      expect { subject.dock(Bike.new) }.to raise_error "station is full"
     end 
   end
 end
