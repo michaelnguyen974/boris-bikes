@@ -38,10 +38,10 @@ RSpec.describe Dockingstation do
     
     #Reason I had to get rid of the test above is because that limited the number of bikes allowed on the dock (more than 1) 
     it "Raises error when more than 20 bikes are docked" do
-      20.times { subject.dock(Bike.new) }
+      Dockingstation::DEFAULT_CAPACITY.times{subject.dock(Bike.new)}
         expect { subject.dock(Bike.new) }.to raise_error "station is full"  
+      end
     end
-  end
 end
 
 #Run Rspec and you will get 4 failures, the first being that the bikes are now placed into an array
